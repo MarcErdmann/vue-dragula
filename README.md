@@ -10,11 +10,11 @@
 bower install vue-dragula
 ```
 ### Usage
-Include vueDragula after Vue.js and dragula:
+Include vue-dragula after Vue.js and dragula:
 ```html
 <script src="path/to/vue.js"></script>
 <script src="path/to/dragula.js"></script>
-<script src="bower_components/vuedragula/vuedragula.min.js"></script>
+<script src="bower_components/vue-dragula/vue-dragula.min.js"></script>
 ```
 Make your Vue.js components draggable, e.g.:
 ```javascript
