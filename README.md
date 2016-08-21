@@ -47,7 +47,7 @@ You have to make sure dnd-board has an id representing its draggable children's 
 <dnd-item v-cloak :id="'lists-' + $index + '-todos'"></dnd-item>
 ```
 When the Vue instance's data object is:
-```json
+```javascript
 data: {
     lists: [
         {
