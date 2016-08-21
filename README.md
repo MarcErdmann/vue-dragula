@@ -1,4 +1,4 @@
-# vueDragula
+# vue-dragula
 ### Features
 - simple nested drag and drops
 - multiple dragula instances automatically
