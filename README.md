@@ -7,7 +7,7 @@
 
 ### Installation
 ```
-bower install vuedragula
+bower install vue-dragula
 ```
 ### Usage
 Include vueDragula after Vue.js and dragula:
