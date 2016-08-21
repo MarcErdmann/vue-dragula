@@ -1,0 +1,15 @@
+{
+  "name": "vue-dragula",
+  "description": "a vue.js plugin for dragula.js",
+  "authors": [
+    "Marc Erdmann"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
