@@ -4,11 +4,13 @@
 - multiple dragula instances automatically
 - Vue.js keeps track of all changes
 
-
 ### Installation
+Either do:
 ```
 bower install vue-dragula
 ```
+or download the scripts and include them in your project.
+
 ### Usage
 Include vue-dragula after Vue.js and dragula:
 ```html
@@ -16,6 +18,7 @@ Include vue-dragula after Vue.js and dragula:
 <script src="path/to/dragula.js"></script>
 <script src="bower_components/vue-dragula/vue-dragula.min.js"></script>
 ```
+---
 Make your Vue.js components draggable, e.g.:
 ```javascript
 Vue.component('dnd-board', {
@@ -29,8 +32,15 @@ Vue.component('dnd-board', {
     }
 });
 ```
-To pass the class of a handle and a direction are optional. The default direction is vertical. In the above example child-elements of dnd-board will be draggable. 
-You have to make sure dnd-board has an id representing its draggable children's position in the Vue instance's data object, e.g.:
+- To pass the class of a handle and a direction parameter are optional.
+- If you just want to specify only the direction, you have to pass _undefined_ without quotes as class-of-handle. (will be improved)
+- The direction could be 'horizontal' or 'vertical'.
+- The default direction is 'vertical'.
+- In the above example child-elements of the component 'dnd-board' will be draggable. 
+---
+
+
+You have to make sure the component (e.g. 'dnd-board') has an id representing its draggable children's position in the Vue instance's data object, e.g.:
 ```html
 <dnd-board v-cloak id="lists">
     <div class="column" v-for="list in lists">
@@ -80,3 +90,5 @@ data: {
     ]
 }
 ```
+---
+If you have any questions or feedback feel free to open an issue :)
