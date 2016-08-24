@@ -37,8 +37,8 @@ Vue.component('dnd-board', {
 - The direction could be 'horizontal' or 'vertical'.
 - The default direction is 'vertical'.
 - In the above example child-elements of the component 'dnd-board' will be draggable. 
----
 
+---
 
 You have to make sure the component (e.g. 'dnd-board') has an id representing its draggable children's position in the Vue instance's data object, e.g.:
 ```html
