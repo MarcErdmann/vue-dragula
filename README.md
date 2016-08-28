@@ -19,21 +19,20 @@ Include vue-dragula after Vue.js and dragula:
 <script src="bower_components/vue-dragula/vue-dragula.min.js"></script>
 ```
 ---
-Make your Vue.js components draggable, e.g.:
+Make your Vue.js components draggable by initializing with *this* and an options-object, which can contain a *handle* and a *direction*, e.g.:
 ```javascript
 Vue.component('dnd-board', {
     props: ['id'],
     template: '#dnd-board',
     ready: function() {
-        Vue.dnd.initialize(this, 'class-of-handle', 'direction');
+        Vue.dnd.initialize(this, {handle: 'class-of-handle', direction: 'horizontal'});
     },
     beforeDestroy: function () {
         Vue.dnd.destroy(this);
     }
 });
 ```
-- To pass the class of a handle and a direction parameter are optional.
-- If you just want to specify only the direction, you have to pass _undefined_ without quotes as class-of-handle. (will be improved)
+- To pass the class of a handle or a direction parameter are optional.
 - The direction could be 'horizontal' or 'vertical'.
 - The default direction is 'vertical'.
 - In the above example child-elements of the component 'dnd-board' will be draggable. 

@@ -7,12 +7,14 @@ var vueDragula = {
         Vue.dnd.dragIndex = 0;
         
         //----- Initialize drag and drop -----//
-        Vue.dnd.initialize = function (elem, handle = undefined, orientation = undefined) {
+        Vue.dnd.initialize = function (elem, options) {
+            options = options || {};
+
             var name = Object.getPrototypeOf(elem).constructor.name;
             if(Vue.dnd[name]) {
                 elem.drake = Vue.dnd[name];
             } else {
-                Vue.dnd[name] = Vue.dnd.dragulaInstance(handle ? handle : undefined, orientation ? orientation : 'vertical');
+                Vue.dnd[name] = Vue.dnd.dragulaInstance(options.handle, options.direction ? options.direction : 'vertical');
                 elem.drake = Vue.dnd[name];
             }
             elem.drake.containers.push(elem.$el);
@@ -44,7 +46,7 @@ var vueDragula = {
         };
         
         //----- Create Dragula Instances -----//
-        Vue.dnd.dragulaInstance = function (handleParam = undefined, directionParam = 'vertical') {
+        Vue.dnd.dragulaInstance = function (handleParam, directionParam) {
             var drake = dragula({
                 accepts: function (el, target, source, sibling) {
                     if (this.containers.includes(target) && this.containers.includes(source)) return true;
