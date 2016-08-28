@@ -74,8 +74,6 @@ var vueDragula = {
                 // 4. returned element is inserted at index of dropped element
                 eval(Vue.dnd.buildQuery(targetPosition)).splice(Vue.dnd.domIndexOf(dropElem, target), 0, eval(Vue.dnd.buildQuery(sourcePosition)).splice(Vue.dnd.dragIndex, 1)[0]);
                 
-                //----- If vuePS plugin -----//
-                if (Vue.ps.scrollElems) Vue.ps.update();
             });
             return drake;
         };
